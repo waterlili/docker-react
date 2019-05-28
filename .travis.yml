@@ -6,4 +6,4 @@ before_install:
   - docker build -t clover/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run clover/docker-react npm run test -- --coverage
+  - docker run -e CI=true clover/docker-react npm run test -- --coverage
